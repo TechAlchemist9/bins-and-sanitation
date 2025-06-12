@@ -3,143 +3,1629 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bins and Sanitations </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <audio id="hoverSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_44086d61b5.mp3" preload="auto"></audio>
-
+    <title>Bins & Sanitation Services | Professional Waste Management in Nairobi</title>
+    <meta name="description" content="Professional garbage collection, sanitation services, and cleaning solutions in Nairobi. Reliable waste management for homes and businesses.">
+    <meta name="keywords" content="garbage collection, sanitation services, Nairobi cleaning, waste management, post-construction cleaning">
     
-
-
-
-
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /*  Global Styles  */
+        :root {
+            --primary-color: #2b9348;
+            --primary-dark: #1d6633;
+            --primary-light: #d8f3dc;
+            --secondary-color: #004d40;
+            --accent-color: #ff9e00;
+            --text-color: #333333;
+            --light-text: #f8f9fa;
+            --gray-bg: #f8f9fa;
+            --dark-bg: #212529;
+            --section-padding: 6rem 0;
+            --transition: all 0.3s ease;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--gray-bg);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-primary {
+            color: var(--primary-color);
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .bg-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .bg-light {
+            background-color: var(--gray-bg);
+        }
+        
+        .bg-dark {
+            background-color: var(--dark-bg);
+        }
+        
+        /*  Header & Navigation  */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        
+        .logo-text span {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-cta {
+            margin-left: 2rem;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            cursor: pointer;
+        }
+        
+        /* Sticky Header */
+        .sticky {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        
+        .sticky .logo img {
+            height: 50px;
+        }
+        
+        /*  Hero Section  */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: var(--dark-bg);
+            margin-top: 80px;
+        }
+        
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-transform: capitalize;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .hero-text {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .hero-scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: white;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        /*  About Section  */
+        .about {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition);
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, rgba(43, 147, 72, 0.3), rgba(0, 77, 64, 0.3));
+        }
+        
+        .about-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content h2::after {
+            margin: 1rem 0;
+        }
+        
+        .about-text {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-features {
+            margin: 2rem 0;
+        }
+        
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-feature i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-text {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+        
+        /*  Services Section  */
+        .services {
+            background-color: var(--gray-bg);
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .service-text {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+            gap: 0.5rem;
+        }
+        
+        .service-link i {
+            transition: var(--transition);
+        }
+        
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /*  Why Choose Us Section  */
+        .why-choose {
+            position: relative;
+        }
+        
+        .why-choose::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: var(--primary-light);
+            z-index: -1;
+        }
+        
+        .why-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .why-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .why-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .why-card:hover::after {
+            height: 10px;
+        }
+        
+        .why-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .why-card:hover .why-icon {
+            transform: scale(1.1);
+        }
+        
+        .why-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .why-text {
+            color: #666;
+        }
+        
+        /*  Partners Section  */
+        .partners {
+            background-color: var(--gray-bg);
+        }
+        
+        .partners-container {
+            position: relative;
+        }
+        
+        .partner-slider {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 1rem 0;
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+        
+        .partner-slider::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .partner-slide {
+            scroll-snap-align: start;
+            flex: 0 0 calc(33.333% - 1.33rem);
+            min-width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .partner-img {
+            max-width: 180px;
+            max-height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .partner-slide:hover .partner-img {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .slider-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .slider-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /*  Testimonials Section  */
+        .testimonials {
+            position: relative;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: var(--primary-light);
+            z-index: -1;
+        }
+        
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            color: var(--primary-light);
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+            color: var(--secondary-color);
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .testimonial-rating {
+            color: var(--accent-color);
+            margin-top: 0.5rem;
+        }
+        
+        /*  Pricing Section  */
+        .pricing {
+            background-color: var(--gray-bg);
+        }
+        
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-text {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--primary-color);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+        }
+        
+        .pricing-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #777;
+        }
+        
+        .pricing-features {
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-feature {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        
+        .pricing-feature:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-feature i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+        
+        /*  Contact Section  */
+        .contact {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .contact-details p, .contact-details a {
+            color: #555;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(43, 147, 72, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /*  Map Section  */
+        .map {
+            height: 400px;
+            position: relative;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(20%) contrast(90%);
+        }
+        
+        /*  Footer  */
+        .footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5rem 0 2rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+        }
+        
+        .footer-logo-text h2 {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 0;
+        }
+        
+        .footer-logo-text span {
+            font-size: 0.8rem;
+            color: var(--primary-light);
+        }
+        
+        .footer-about {
+            margin-bottom: 1.5rem;
+            color: #ddd;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-light);
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #ddd;
+        }
+        
+        .footer-contact-item i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+        
+        .footer-newsletter p {
+            color: #ddd;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-family: inherit;
+        }
+        
+        .newsletter-btn {
+            padding: 0 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .footer-social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .footer-social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /*  Back to Top Button  */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+        
+        /*  Responsive Styles  */
+        @media (max-width: 992px) {
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .about-content {
+                text-align: center;
+            }
+            
+            .about-content h2::after {
+                margin: 1rem auto;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                order: 2;
+            }
+            
+            .contact-form {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .header-container {
+                padding: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .nav-cta {
+                margin-left: 0;
+                margin-top: 2rem;
+            }
+            
+            .hero {
+                min-height: 600px;
+                margin-top: 70px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .partner-slide {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-text {
+                font-size: 1rem;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .partner-slide {
+                flex: 0 0 100%;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-col {
+                text-align: center;
+            }
+            
+            .footer-col h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .footer-logo {
+                justify-content: center;
+            }
+            
+            .footer-social {
+                justify-content: center;
+            }
+            
+            .footer-links a {
+                justify-content: center;
+            }
+        }
+        
+        /*  Animation Classes  */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .slide-up {
+            animation: slideUp 1s ease-in-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!--  Header  -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="main-logo-large.jpg" alt="Bins & Sanitation Services Logo ">
 
-<header>
-  <div class="logo-container">
-    <img src="main-logo-large.jpg" alt="Bins and Sanitation Logo">
-    <div class="company-name">Bins &#38 Sanitation Services</div>
-  </div>
-  <div class="contact-info">
-    <p>Email: info@binsanitation.co.ke</p>
-    <p>Phone: +254 739 476614</p>
-    <p>Location: Nairobi, Kenya</p>
-  </div>
-</header>
+                <div class="logo-text">
+                    <h1>Bins & Sanitation</h1>
+                    <span>Professional Waste Management</span>
+                </div>
+            </a>
 
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
 
-<!--navigation bar-->
-<div id="nav">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">BLOGS</a></li>
-            <li><a href="#">PRICING</a></li>
-            <li><a href="#">CONTACT US</a></li>
-        </ul>
- </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#why-choose" class="nav-link">Why Choose Us</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="tel:+254739476614" class="btn nav-cta">Call Now</a>
+            </nav>
+        </div>
+    </header>
 
+    <!--  Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('home\ 1.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('home\ 2.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('home\ 3.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('home\ 4.jpg');"></div>
+        </div>
 
-<!-- Home Section with Slideshow -->
-<section id="home" class="slideshow-container">
-  <div class="slides-wrapper">
-    <div class="slide"><img src="home 1.jpeg"></div>
-      <div class="slide"><img src="home 2.jpeg"></div>
-      <div class="slide"><img src="home 3.jpeg"></div>
-      <div class="slide"><img src="home 4.jpg"></div>
-      <div class="slide"><img src="home 5.webp"></div>
-      <div class="slide"><img src="home 6.webp"></div>
-  </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Professional Sanitation & Waste Management Services</h1>
+                <h2 class="hero-subtitle">Keeping Nairobi Clean and Green</h2>
+                <p class="hero-text">We provide reliable garbage collection, sanitation services, and cleaning solutions for homes, businesses, and construction sites across Nairobi.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Get a Quote</a>
+                    <a href="#services" class="btn btn-outline">Our Services</a>
+                </div>
+            </div>
+        </div>
 
-  <div class="caption">
-    <h2>Welcome to Bins & Sanitation Services</h2>
-    <h2>Clean Today, Safe Tomorrow</h2>
-    <p>Your trusted partner in cleaning and garbage collection across Nairobi.</p>
-     <p>Reliable garbage collection and sanitation services for homes, businesses, and communities.</p>
-  </div>
+        <a href="#about" class="hero-scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!--  cbout Section  -->
+   <section class="section about" id="about">
+    <div class="container">
+        <h2 class="section-title">About Our Company</h2>
+        
+        <div class="about-container">
+            <div class="about-img" data-aos="fade-right" style="min-height: 100%; display: flex; align-items: center;">
+                <img src="land scaping.jpg" alt="Bins & Sanitation Services Team" style="object-fit: cover; height: 100%;">
+            </div>
+            
+            <div class="about-content" data-aos="fade-left">
+                <h2>Your Trusted Sanitation Partner Since 2005</h2>
+                <p class="about-text">Bins & Sanitation Services is a trusted and experienced cleaning and waste management company that has served the community since 2005. Founded on the belief that everyone deserves a clean, safe, and sustainable environment, we have grown into a reliable partner for both residential and commercial clients.</p>
+                
+                <p class="about-text">Our services are designed to meet the diverse needs of our customers with a strong focus on quality, reliability, and environmental responsibility. We specialize in:</p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <i class="fas fa-trash-alt"></i>
+                        <div>
+                            <strong>Garbage Collection</strong>
+                            <p>Efficient, timely, and eco-conscious waste removal for homes, businesses, and institutions.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-hammer"></i>
+                        <div>
+                            <strong>Post-Construction Cleaning</strong>
+                            <p>Thorough, professional cleanup after construction or renovation to prepare spaces for use.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <strong>Residential Cleaning</strong>
+                            <p>Customized home cleaning solutions for healthier, more comfortable living environments.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <strong>Office Cleaning</strong>
+                            <p>Reliable and discreet janitorial services to maintain clean and productive workspaces.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-leaf"></i>
+                        <div>
+                            <strong>Landscaping & Gardening</strong>
+                            <p>Beautifying and maintaining outdoor spaces with expert gardening and landscape care.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="about-text" style="margin-top: 1.5rem;">Our well-trained team uses advanced equipment and environmentally friendly practices to deliver outstanding results. We believe that great service starts with understanding our clients' unique needs and ends with exceeding their expectations.</p>
+                
+                <p class="about-text">Whether you're a homeowner, property manager, or business owner, Bins & Sanitation Services is your go-to partner for cleanliness, order, and sustainability.</p>
+                
+                
+            </div>
+        </div>
+        
+        <div class="about-stats" data-aos="fade-up">
+            <div class="stat-item">
+                <div class="stat-number">18+</div>
+                <div class="stat-text">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-text">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-text">Customer Support</div>
+            </div>
+        </div>
+    </div>
 </section>
+    <!--  Services Section  -->
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">We offer comprehensive sanitation and cleaning solutions tailored to meet your specific needs. Our services are designed to maintain cleanliness, hygiene, and environmental sustainability.</p>
+            
+            <div class="services-container">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="zoom-in">
+                    <div class="service-img">
+                        <img src="garbage collection.jpeg" alt="Garbage Collection Service">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Garbage Collection</h3>
+                        <p class="service-text">Reliable waste pickup and disposal for homes and businesses.</p>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-img">
+                        <img src="post construction.webp" alt="Post Construction Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Post-Construction Cleaning</h3>
+                        <p class="service-text">Complete cleanup after building and renovation projects.</p>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-img">
+                        <img src="residential cleaning.webp" alt="Residential Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Residential Cleaning</h3>
+                        <p class="service-text">Detailed home cleaning tailored to your needs.</p>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-img">
+                        <img src="office cleaning.jpg" alt="Office Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Office Cleaning</h3>
+                        <p class="service-text">Professional cleaning for offices and commercial spaces.</p>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-img">
+                        <img src="land scaping.jpg" alt="Landscaping & Gardening">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Landscaping & Gardening</h3>
+                        <p class="service-text">Professional landscape design, maintenance, and gardening services to enhance your outdoor spaces and maintain their beauty.</p>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-img">
+                        <img src="bin-1-large.jpg" alt="Waste Recycling">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Waste Recycling</h3>
+                        <p class="service-text">Environmentally responsible recycling services for paper, plastic, glass, and other recyclable materials to reduce landfill waste.</p>
+                        <a href="#contact" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!--about section-->
- <section id="about">
-  <h2>About Us</h2>
-  <p>
-    <strong>Bins & Sanitation Services</strong> is a trusted and experienced cleaning and waste management company that has served the community since 2005. Founded on the belief that everyone deserves a clean, safe, and sustainable environment, we have grown into a reliable partner for both residential and commercial clients.
-  </p>
-  <p>
-    Our services are designed to meet the diverse needs of our customers with a strong focus on quality, reliability, and environmental responsibility. We specialize in:
-  </p>
-  <ul>
-    <li><strong>Garbage Collection</strong> – Efficient, timely, and eco-conscious waste removal for homes, businesses, and institutions.</li>
-    <li><strong>Post-Construction Cleaning</strong> – Thorough, professional cleanup after construction or renovation to prepare spaces for use.</li>
-    <li><strong>Residential Cleaning</strong> – Customized home cleaning solutions for healthier, more comfortable living environments.</li>
-    <li><strong>Office Cleaning</strong> – Reliable and discreet janitorial services to maintain clean and productive workspaces.</li>
-    <li><strong>Landscaping & Gardening</strong> – Beautifying and maintaining outdoor spaces with expert gardening and landscape care.</li>
-  </ul>
-  <p>
-    Our well-trained team uses advanced equipment and environmentally friendly practices to deliver outstanding results. We believe that great service starts with understanding our clients’ unique needs and ends with exceeding their expectations.
-  </p>
-  <p>
-    Whether you're a homeowner, property manager, or business owner, Bins & Sanitation Services is your go-to partner for cleanliness, order, and sustainability.
-  </p>
-</section>
 
 
 
-<!--services section-->
-
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services-container">
-    <div class="service-card">
-      <img src="garbage collection.jpeg">
-      <div class="service-info">
-        <h3>Garbage Collection</h3>
-        <p>Reliable waste pickup and disposal for homes and businesses.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="post construction.webp">
-      <div class="service-info">
-        <h3>Post-Construction Cleaning</h3>
-        <p>Complete cleanup after building and renovation projects.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="residential cleaning.webp">
-      <div class="service-info">
-        <h3>Residential Cleaning</h3>
-        <p>Detailed home cleaning tailored to your needs.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="office cleaning.jpg">
-      <div class="service-info">
-        <h3>Office Cleaning</h3>
-        <p>Professional cleaning for offices and commercial spaces.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="land scaping.jpg">
-      <div class="service-info">
-        <h3>Landscaping & Gardening</h3>
-        <p>Maintain and beautify your outdoor spaces.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<!--why choose us-->
+    <!--why choose us-->
 <!-- Why Choose Us Section -->
 <section id="why-choose-us">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1em;">Why Choose Us</h2>
@@ -249,54 +1735,88 @@
 
 
 
+<style>
+    /*======================================== whay choose us=======================================*/
+.why-card-container {
+  perspective: 1000px;
+  width: 300px;
+  height: 260px;
+  margin: 1em;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
 
-<!-- Pricing Section -->
-<section id="pricing">
-  <h2>Pricing & Quotations</h2>
-  <div class="pricing-content">
-    <p>
-      At <strong>Bins & Sanitation Services</strong>, we understand that every client has unique needs.
-      That’s why we don’t offer fixed pricing. We begin by visiting your premises to assess the scope of work before preparing a fair, customized quote.
-    </p>
-    <p>
-      Our personalized approach ensures affordability, transparency, and solutions tailored to your home, office, or facility.
-    </p>
-    <p class="cta">
-      <strong>Call us today</strong> to schedule a site visit and receive your personalized quote:  
-      <br><a href="tel:+254739476614">+254 739 476 614</a>
-    </p>
-  </div>
-</section>
+.why-card-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-<!-- Contact Us Section -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-content">
-    <p>We’d love to hear from you! Whether you have questions or need service, reach out anytime.</p>
-    <ul class="contact-details">
-      <li><strong>Phone:</strong> <a href="tel:+254739476614">+254 739 476 614</a></li>
-      <li><strong>Email:</strong> <a href="mailto:info@binsanitation.co.ke">info@binsanitation.co.ke</a></li>
-      <li><strong>Location:</strong> Nairobi, Kenya</li>
-    </ul>
-  </div>
-</section>
+.why-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
 
+.why-card-container:hover .why-card-inner {
+  transform: rotateY(180deg);
+}
 
+.why-card-front, .why-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  text-align: center;
+  background: #fff;
+}
 
-<!--footer section-->
-<footer>
-  <div class="footer-container">
-    <div class="footer-info">
-      <h3>Bins and Sanitation Services</h3>
-      <p>Email: <a href="mailto:info@binsandsanitation.co.ke">info@binsandsanitation.co.ke</a></p>
-      <p>Phone: <a href="tel:+254739476614">+254 739 476 614</a></p>
-    </div>
-    <div class="footer-copy">
-      <p>&copy; 2025 Bins and Sanitation Services. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+.why-card-front {
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.why-card-back {
+  background: #d8f3dc;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  color: #2b9348;
+}
+
+.why-card-front .icon {
+  font-size: 2.5rem;
+  color: #2b9348;
+  margin-bottom: 1em;
+}
+
+.why-card-front strong {
+  font-size: 1.3rem;
+  color: #2b9348;
+  margin-bottom: 0.5em;
+}
+
+.why-card-front p {
+  font-size: 0.95em;
+  color: #333;
+}
+
+.why-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+</style>
 
 
 
@@ -328,7 +1848,505 @@
   });
 </script>
 
+    <!--  Partners Section  -->
+    <section class="section partners" id="partners">
+        <div class="container">
+            <h2 class="section-title">Our Trusted Partners</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">We collaborate with leading organizations and institutions to provide comprehensive sanitation solutions across Nairobi.</p>
+            
+            <div class="partners-container">
+                <div class="partner-slider" id="partnerSlider">
+                    <div class="partner-slide">
+                        <img src="partner1.png" alt="Partner 1" class="partner-img">
+                    </div>
+                    <div class="partner-slide">
+                        <img src="partner2.png" alt="Partner 2" class="partner-img">
+                    </div>
+                    <div class="partner-slide">
+                        <img src="partner3.png" alt="Partner 3" class="partner-img">
+                    </div>
+                    <div class="partner-slide">
+                        <img src="partner4.png" alt="Partner 4" class="partner-img">
+                    </div>
+                    <div class="partner-slide">
+                        <img src="partner5.png" alt="Partner 5" class="partner-img">
+                    </div>
+                    <div class="partner-slide">
+                        <img src="partner6.png" alt="Partner 6" class="partner-img">
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevPartner">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn" id="nextPartner">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!--  Testimonials Section  -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">Hear from some of our satisfied customers about their experience with our services.</p>
+            
+            <div class="testimonials-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="testimonial-text">Bins & Sanitation Services has been collecting our office waste for over 3 years now. They're always punctual and professional. Highly recommended!</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="client1.jpg" alt="James Mwangi">
+                        </div>
+                        <div class="author-info">
+                            <h4>James Mwangi</h4>
+                            <p>Office Manager, Nairobi</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="testimonial-text">The post-construction cleaning team did an amazing job on our new apartment complex. They were thorough and paid attention to every detail.</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="client2.jpg" alt="Sarah Kamau">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Kamau</h4>
+                            <p>Property Developer</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="testimonial-text">We switched to Bins & Sanitation last year and have been extremely pleased with their reliable service and competitive pricing. Great company!</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="client3.jpg" alt="David Ochieng">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Ochieng</h4>
+                            <p>Restaurant Owner</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+   <!--  Pricing Section  -->
+<section class="section pricing" id="pricing">
+    <div class="container">
+        <h2 class="section-title">Pricing & Quotations</h2>
+        <div class="pricing-text">
+            <p>At Bins & Sanitation Services, we understand that every client has unique needs. That’s why we don’t offer fixed pricing. We begin by visiting your premises to assess the scope of work before preparing a fair, customized quote.</p>
+            <p>Our personalized approach ensures affordability, transparency, and solutions tailored to your home, office, or facility.</p>
+        </div>
+        
+        <div class="pricing-cards">
+            <!-- Plan 1 -->
+            <div class="pricing-card" data-aos="fade-up">
+                <h3 class="pricing-title">Residential Services</h3>
+                <div class="pricing-price">Custom <span>Quote</span></div>
+                <ul class="pricing-features">
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Tailored collection schedule</li>
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Waste segregation options</li>
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Reliable service</li>
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Eco-friendly practices</li>
+                </ul>
+                <a href="#contact" class="btn">Request Quote</a>
+            </div>
+            
+            <!-- Plan 2 -->
+            <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="100">
+                <div class="popular-badge">Most Popular</div>
+                <h3 class="pricing-title">Commercial Services</h3>
+                <div class="pricing-price">Custom <span>Quote</span></div>
+                <ul class="pricing-features">
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Comprehensive waste management</li>
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Dedicated account manager</li>
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Detailed waste reports</li>
+                </ul>
+                <a href="#contact" class="btn">Request Quote</a>
+            </div>
+            
+            <!-- Plan 3 -->
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="pricing-title">Tailored Solutions</h3>
+                <div class="pricing-price">Custom <span>Quote</span></div>
+                <ul class="pricing-features">
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Solutions for apartments, estates, and large institutions</li>
+                    <li class="pricing-feature"><i class="fas fa-check"></i> Flexible pricing based on assessment</li>
+                </ul>
+                <a href="#contact" class="btn">Request Quote</a>
+            </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 3rem;">
+            <p><strong>Need a custom solution?</strong> We offer tailored plans for apartments, estates, and large institutions. <a href="#contact">Contact us</a> for a personalized quote.</p>
+        </div>
+    </div>
+</section>
+
+    <!--  Contact Section  -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">Get in touch with us for inquiries, service requests, or to schedule a consultation.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <!-- Contact Card 1 -->
+                    <div class="contact-card" data-aos="fade-right">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Our Location</h3>
+                            <p>UTAWALA JOZANO BLOCK 314</p>
+                            <p>EASTERN BYPASS OFF MOMBASA RD</p>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Card 2 -->
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Numbers</h3>
+                            <a href="tel:+254722288317">+254 (0)722 288317</a>
+                            <a href="tel:+254721442545">+254 (0)721 442545</a>
+                            <a href="tel:+254739476614">+254 (0)739 476614</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Card 3 -->
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <a href="mailto:info@binsandsanitation.co.ke">info@binsandsanitation.co.ke</a>
+                            <p>Business Hours: Mon-Sun, 6:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="contact-social" data-aos="fade-right" data-aos-delay="300">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service Needed</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="garbage">Garbage Collection</option>
+                                <option value="construction">Post-Construction Cleaning</option>
+                                <option value="residential">Residential Cleaning</option>
+                                <option value="office">Office Cleaning</option>
+                                <option value="landscaping">Landscaping & Gardening</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Map Section  -->
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.854244477262!2d36.94589481475391!3d-1.263735635960711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173c0a1f9c27%3A0x4430b5b5d8f1a3d5!2sUtawala%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!--  Footer  -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Footer Column 1 -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="main-logo-large.jpg" alt="Bins & Sanitation Logo">
+                        <div class="footer-logo-text">
+                            <h2>Bins & Sanitation</h2>
+                            <span>Professional Waste Management</span>
+                        </div>
+                    </div>
+                    <p class="footer-about">Providing reliable sanitation and waste management services in Nairobi since 2005. Committed to cleanliness, environmental sustainability, and customer satisfaction.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Footer Column 2 -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#why-choose"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 3 -->
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Garbage Collection</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Post-Construction Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Residential Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Office Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Landscaping & Gardening</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Waste Recycling</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 4 -->
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>UTAWALA JOZANO BLOCK 314, EASTERN BYPASS OFF MOMBASA RD, Nairobi</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+254 722 288317<br>+254 721 442545<br>+254 739 476614</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@binsandsanitation.co.ke</p>
+                    </div>
+                    
+                    <h3 style="margin-top: 1.5rem;">Newsletter</h3>
+                    <p class="footer-about">Subscribe to our newsletter for updates and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Bins & Sanitation Services. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by Your Company</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--  Back to Top Button  -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!--  JavaScript  -->
+   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a nav link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Sticky Header
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+        
+        // Hero Slider
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            heroSlides.forEach(slide => slide.classList.remove('active'));
+            heroSlides[index].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % heroSlides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Partner Slider
+        const partnerSlider = document.getElementById('partnerSlider');
+        const prevPartnerBtn = document.getElementById('prevPartner');
+        const nextPartnerBtn = document.getElementById('nextPartner');
+        
+        nextPartnerBtn.addEventListener('click', () => {
+            partnerSlider.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+        
+        prevPartnerBtn.addEventListener('click', () => {
+            partnerSlider.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For demonstration, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been received. We'll contact you soon regarding your ${service} inquiry.`);
+            
+            // Reset the form
+            contactForm.reset();
+        });
+        
+        // Initialize Google Map
+        function initMap() {
+            // Map initialization code would go here
+            // You would need to use the Google Maps API with your API key
+        }
+    </script>
+    
+    <!-- Load Google Maps API (replace YOUR_API_KEY with your actual API key) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>
